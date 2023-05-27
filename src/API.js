@@ -13,6 +13,8 @@ const userUrl = `${baseURL}/users`;
 let genres = [];
 let instruments = [];
 
+
+
 const request = (method, url, data, token) => {
   const configurationObject = {
     method,
@@ -129,7 +131,7 @@ const deleteMatch = (unmatchedUserId, token) => {
   );
 };
 
-export default {
+const API = {
   signIn,
   validate,
   signUp,
@@ -148,3 +150,6 @@ export default {
   deleteMatch,
   submitPost,
 };
+
+// export default API;
+module.exports = API;
